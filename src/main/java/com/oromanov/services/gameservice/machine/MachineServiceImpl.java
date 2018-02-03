@@ -20,4 +20,8 @@ public class MachineServiceImpl implements MachineService {
 	public List<MachineEntity> getAllAvailableMachines() {
 		return repository.findAll();
 	}
+
+	public MachineEntity getMachineById(Long id){
+		return repository.findOne(id);
+	}
 }

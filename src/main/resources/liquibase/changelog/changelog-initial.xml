@@ -4,11 +4,12 @@
 xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
 http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 	<changeSet id="best_game_db: tables" author="oromanov">
-		<dropTable tableName="machine"/>
+		<validCheckSum>ANY</validCheckSum>
 		<sqlFile path="/initial/tables/machine.sql" relativeToChangelogFile="true" />
 		<rollback/>
 	</changeSet>
 	<changeSet id="best_game_db: data" author="oromanov">
+		<validCheckSum>ANY</validCheckSum>
 		<sqlFile path="/initial/data/machine.sql" relativeToChangelogFile="true"/>
 		<rollback/>
 	</changeSet>

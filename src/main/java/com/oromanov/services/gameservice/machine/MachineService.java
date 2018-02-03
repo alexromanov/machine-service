@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface MachineService {
 	List<MachineEntity> getAllAvailableMachines();
+
+	MachineEntity getMachineById(Long id);
 }

@@ -1,0 +1,1 @@
+INSERT INTO machine (machine_id, machine_name) VALUES (1, 'FIRST MACHINE');

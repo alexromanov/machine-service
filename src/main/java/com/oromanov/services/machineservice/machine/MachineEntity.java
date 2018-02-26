@@ -1,4 +1,4 @@
-package com.oromanov.services.gameservice.machine;
+package com.oromanov.services.machineservice.machine;
 
 import lombok.*;
 
@@ -7,17 +7,18 @@ import javax.persistence.*;
 /**
  * Created by aleksandr on 03.02.18.
  */
+@RequiredArgsConstructor
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
-@RequiredArgsConstructor
-@ToString
 @Table(name = "machine")
 public class MachineEntity {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long machine_id;
+	private long id;
 
-	@NonNull
-	private String machine_name;
+	@Column(name = "name")
+	private String name;
+
+	@Column(name = "user_id")
+	private long userId;
 }
